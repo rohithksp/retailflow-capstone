@@ -39,12 +39,10 @@ Example:
 - Partitioned by dt for traceability.
 
 Example:
-
-s3://.../quarantine/orders/dt=2026-07-11/part-0000.parquet
+- s3://.../quarantine/orders/dt=2026-07-11/part-0000.parquet
 
 **Step 33 — CloudWatch Metrics
 **
-
 Custom metrics published for:
 - Count of valid vs. quarantined records.
 - Rule violations per table.
