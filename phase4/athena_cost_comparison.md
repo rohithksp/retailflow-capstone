@@ -9,15 +9,15 @@
 
 ### 1. Un‑Pruned Query
 
-SELECT COUNT(*) FROM orders; -- 3.09mb
-SELECT COUNT(*)  FROM customers; -- 513.30kb
-SELECT COUNT(*)  FROM products; -- 20.80kb
+- SELECT COUNT(*) FROM orders; -- 3.09mb
+- SELECT COUNT(*)  FROM customers; -- 513.30kb
+- SELECT COUNT(*)  FROM products; -- 20.80kb
 
 ### 2. Pruned Query
 
-select count(*) from products where dt = '2026-07-11'; -- 20.80kb
-select count(*) from orders where dt = '2026-07-11'; -- 3.09mb
-select count(*) from customers where dt = '2026-07-11'; -- 513.30kb
+- select count(*) from products where dt = '2026-07-11'; -- 20.80kb
+- select count(*) from orders where dt = '2026-07-11'; -- 3.09mb
+- select count(*) from customers where dt = '2026-07-11'; -- 513.30kb
 
 ## **Observations**
 No difference in bytes scanned between pruned and un‑pruned queries.
