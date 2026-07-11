@@ -1,0 +1,16 @@
+{
+  "Rules": [
+    { "Table": "orders", "Check": "Completeness", "Column": "order_id" },
+    { "Table": "orders", "Check": "Uniqueness", "Column": "order_id" },
+    { "Table": "orders", "Check": "ReferentialIntegrity", "Column": "customer_id", "ReferencedColumn": "customers.customer_id" },
+
+    { "Table": "order_items", "Check": "Completeness", "Column": "product_id" },
+    { "Table": "order_items", "Check": "ReferentialIntegrity", "Column": "product_id", "ReferencedColumn": "products.product_id" },
+
+    { "Table": "customers", "Check": "Completeness", "Column": "customer_id" },
+    { "Table": "customers", "Check": "Uniqueness", "Column": "customer_id" },
+
+    { "Table": "products", "Check": "Completeness", "Column": "product_id" },
+    { "Table": "products", "Check": "Uniqueness", "Column": "product_id" }
+  ]
+}
