@@ -37,9 +37,7 @@ Example:
 - Invalid records are written to:
 - s3://capstone-project-bucket-12345/quarantine/<table>/
 - Partitioned by dt for traceability.
-
-Example:
-- s3://.../quarantine/orders/dt=2026-07-11/part-0000.parquet
+- Example:s3://.../quarantine/orders/dt=2026-07-11/part-0000.parquet
 
 **Step 33 — CloudWatch Metrics
 **
