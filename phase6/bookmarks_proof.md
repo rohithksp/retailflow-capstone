@@ -41,9 +41,9 @@ Example:
 
 **Step 33 — CloudWatch Metrics
 **
-Custom metrics published for:
-- Count of valid vs. quarantined records.
-- Rule violations per table.
+- Custom metrics published for:
+  - Count of valid vs. quarantined records.
+  - Rule violations per table.
 
 **Example metric:
 **
