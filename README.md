@@ -65,4 +65,4 @@ This capstone project demonstrates how to build a **cloud data platform** on AWS
 ## 🚀 Getting Started
 1. Clone this repo:
    ```bash
-   git clone https://github.com/<your-username>/retailflow-capstone.git
+   git clone https://github.com/rohithksp/retailflow-capstone.git
