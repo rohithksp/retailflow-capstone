@@ -9,7 +9,7 @@ It covers null rates, duplicates, schema evolution, and deliberate data quality 
 ## 1. Customers.csv
 - **Rows generated**: 5,000 (+ ~1% duplicates)
 - **Null/invalid emails**: ~2%
-- **Duplicate customer_id count**: <fill in>
+- **Duplicate customer_id count**: 50
 - **Notes**: Email column deliberately contains nulls and malformed values to simulate real-world dirty data.
 
 ---
@@ -17,7 +17,7 @@ It covers null rates, duplicates, schema evolution, and deliberate data quality 
 ## 2. Products.csv
 - **Rows generated**: 800
 - **Categories**: Electronics, Clothing, Books, Home, Sports
-- **Unit price range**: <fill in from `describe()`, e.g. 5–500>
+- **Unit price range**: min: 5.10 - max: 499.93
 - **Notes**: Clean catalog, no deliberate issues.
 
 ---
@@ -25,16 +25,22 @@ It covers null rates, duplicates, schema evolution, and deliberate data quality 
 ## 3. Orders Day1 (orders_day1.json)
 - **Rows generated**: 20,000
 - **Columns**: order_id, customer_id, order_ts, store_region, status
-- **Null rates**: <fill in>
+- **Null rates**: 0
 - **Notes**: Order timestamps distributed across the year; store_region balanced across 4 regions.
 
 ---
 
 ## 4. Order Items Day1 (order_items_day1.json)
 - **Rows generated**: ~55,000
-- **Invalid product_id references**: <fill in count>
-- **Negative/zero quantities**: <fill in count>
-- **Revenue distribution**: <summary from histogram>
+- **Invalid product_id references**: 43
+- **Negative/zero quantities**: 56
+- **Revenue distribution**:
+- 50,020 records
+- Mean ≈ 741
+- Std Dev ≈ 593
+- Range: -498 (due to injected invalids) → 2,499
+- Median ≈ 557
+- Distribution skewed right, with deliberate outliers
 - **Notes**: Includes deliberate referential integrity failures and invalid quantities.
 
 ---
@@ -49,8 +55,8 @@ It covers null rates, duplicates, schema evolution, and deliberate data quality 
 
 ## 6. Order Items Day2 (order_items_day2.json)
 - **Rows generated**: ~11,000
-- **Invalid product_id references**: <fill in count>
-- **Negative/zero quantities**: <fill in count>
+- **Invalid product_id references**: 0
+- **Negative/zero quantities**: 0
 - **Notes**: Includes discount_code column and deliberate data quality issues.
 
 ---
