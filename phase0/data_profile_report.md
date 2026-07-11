@@ -35,12 +35,12 @@ It covers null rates, duplicates, schema evolution, and deliberate data quality 
 - **Invalid product_id references**: 43
 - **Negative/zero quantities**: 56
 - **Revenue distribution**:
-- 50,020 records
-- Mean ≈ 741
-- Std Dev ≈ 593
-- Range: -498 (due to injected invalids) → 2,499
-- Median ≈ 557
-- Distribution skewed right, with deliberate outliers
+  - 50,020 records
+  - Mean ≈ 741
+  - Std Dev ≈ 593
+  - Range: -498 (due to injected invalids) → 2,499
+  - Median ≈ 557
+  - Distribution skewed right, with deliberate outliers
 - **Notes**: Includes deliberate referential integrity failures and invalid quantities.
 
 ---
