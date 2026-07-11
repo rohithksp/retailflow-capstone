@@ -55,6 +55,7 @@ Invalid records are written to a dedicated S3 location partitioned by date (`dt`
 Custom metrics are published to Amazon CloudWatch to track data quality performance:
 * Count of valid vs. quarantined records.
 * Rule violations per table.
+* As of now, we could see 100% valid hence we can observe straight line in a image.
 
 ### Example Metric Implementation:
 
