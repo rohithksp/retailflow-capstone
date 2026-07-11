@@ -1,0 +1,14 @@
+{
+  "EventPattern": {
+    "source": ["aws.s3"],
+    "detail-type": ["Object Created"],
+    "detail": {
+      "bucket": {
+        "name": ["capstone-project-bucket-12345"]
+      },
+      "object": {
+        "key": [{"prefix": "raw/"}]
+      }
+    }
+  }
+}
