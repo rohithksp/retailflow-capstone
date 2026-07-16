@@ -9,7 +9,7 @@
 # Define source and target paths using Unity Catalog Catalog and Schema
 CATALOG = "main"
 SCHEMA = "clickstream_analytics"
-VOLUME_SOURCE_PATH = f"/Volumes/{CATALOG}/{SCHEMA}/curated_landing/clickstream/"
+VOLUME_SOURCE_PATH = f"/Volumes/{CATALOG}/{SCHEMA}/raw/clickstream/"
 CHECKPOINT_PATH = f"dbfs:/pipelines/{CATALOG}_{SCHEMA}/_checkpoints/bronze_clickstream/"
 TARGET_TABLE = f"{CATALOG}.{SCHEMA}.bronze_clickstream"
 
