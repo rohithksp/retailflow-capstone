@@ -1,0 +1,40 @@
+{
+  "name": "retail_clickstream_dlt_pipeline",
+  "storage": "dbfs:/pipelines/retail_clickstream_dlt",
+  "target": "retail_dlt",
+  "edition": "ADVANCED",
+  "development": true,
+  "continuous": false,
+  "photon": true,
+  "configuration": {
+    "catalog": "retail",
+    "environment": "development",
+    "source_system": "clickstream"
+  },
+  "libraries": [
+    {
+      "notebook": {
+        "path": "/Repos/databricks-capstone/notebooks/dlt_pipeline.py"
+      }
+    }
+  ],
+  "clusters": [
+    {
+      "label": "default",
+      "num_workers": 1,
+      "spark_conf": {
+        "spark.databricks.delta.preview.enabled": "true"
+      }
+    }
+  ],
+  "permissions": [
+    {
+      "level": "CAN_VIEW",
+      "group_name": "data_engineers"
+    },
+    {
+      "level": "CAN_RUN",
+      "group_name": "data_engineers"
+    }
+  ]
+}
